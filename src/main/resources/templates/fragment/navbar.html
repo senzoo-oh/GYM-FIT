@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="navbar_css(title,links)">
+
+    <title th:replace="${title}">Layout Title</title>
+    <link href="../static/css/navbar.css" rel="stylesheet" type="text/css" th:href="@{/css/navbar.css}" />
+
+    <th:block th:replace="${links}" />
+</head>
+
+
+<body>
+    <div th:fragment="header">
+        <span class="navbarSignInButton">
+            <a th:href="@{/user/signUp}" class="navbarSignInButton">SignUp</a>
+            <span class="navbarSignInButton">&nbsp|&nbsp</span>
+            <a th:href="@{/user/signUp}" class="navbarSignInButton">LogIn</a>
+        </span>
+        <a th:href="@{/}" class="GYMFIT">GYM FIT</a>
+
+        <a class="menu">MYRECORD</a>
+        <a class="menu">BOARD</a>
+        <a class="menu">MARKET</a>
+        <a class="menu">RANK</a>
+
+        <hr>
+    </div>
+</body>
+
+</html>
